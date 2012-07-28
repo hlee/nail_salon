@@ -1,0 +1,30 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @nail_salon.title
+%p
+  %b Phone num:
+  = @nail_salon.phone_num
+%p
+  %b Address:
+  = @nail_salon.address
+%p
+  %b Zip:
+  = @nail_salon.zip
+%p
+  %b State:
+  = @nail_salon.state
+%p
+  %b City:
+  = @nail_salon.city
+%p
+  %b Uuid:
+  = @nail_salon.uuid
+%p
+  %b Url:
+  = @nail_salon.url
+
+= link_to 'Edit', edit_nail_salon_path(@nail_salon)
+\|
+= link_to 'Back', nail_salons_path

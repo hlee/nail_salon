@@ -1,0 +1,15 @@
+= simple_form_for(@nail_salon) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :title
+    = f.input :phone_num
+    = f.input :address
+    = f.input :zip
+    = f.input :state
+    = f.input :city
+    = f.input :uuid
+    = f.input :url
+
+  .form-actions
+    = f.button :submit

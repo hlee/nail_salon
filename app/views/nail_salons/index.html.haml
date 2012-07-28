@@ -1,0 +1,35 @@
+%h1 Listing nail_salons
+
+%table
+  %tr
+    %th Title
+    %th Phone num
+    %th Address
+    %th Zip
+    %th State
+    %th City
+    %th Uuid
+    %th Url
+    %th Category
+    %th
+    %th
+    %th
+
+  - @nail_salons.each do |nail_salon|
+    %tr
+      %td= nail_salon.title
+      %td= nail_salon.phone_num
+      %td= nail_salon.address
+      %td= nail_salon.zip
+      %td= nail_salon.state
+      %td= nail_salon.region
+      %td= nail_salon.uuid
+      %td= nail_salon.url
+      %td= nail_salon.category
+      %td= link_to 'Show', nail_salon
+      %td= link_to 'Edit', edit_nail_salon_path(nail_salon)
+      %td= link_to 'Destroy', nail_salon, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Nail salon', new_nail_salon_path
